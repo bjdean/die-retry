@@ -8,3 +8,6 @@ pm_to_blib*
 .lwpcookies
 Die-Retry-*
 cover_db
+MANIFEST.bak
+META.yml
+inc*
