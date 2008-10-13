@@ -18,7 +18,7 @@ use warnings;
 package Die::Retry;
 use base 'Exporter';
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our @EXPORT_OK = qw(retry);
 
@@ -86,7 +86,7 @@ Die::Retry - Easy retry handler for exceptions
  # There will be no delay between retries.
 
  use Die::Retry qw( retry );
- my $retval = retry( sub { some_func_with_exceptions($param1, $param2)
+ my $retval = retry( sub { some_func_with_exceptions($param1, $param2) }
                    , times => 3
                    , delay => 0
                    );
