@@ -2,10 +2,9 @@ AUTHORS
 Changes
 lib/Die/Retry.pm
 Makefile.PL
-MANIFEST
+MANIFEST			This list of files
 MANIFEST.SKIP
 META.yml
-r/retry.t
 README
 t/00-load.t
 t/boilerplate.t
