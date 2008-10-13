@@ -1,0 +1,50 @@
+Die-Retry
+
+This distribution provides 'Die::Retry', an easy retry handler for code blocks
+which may raise exceptions. If these exceptions can be silently skipped between
+retried this module offers a concise way to express the retry loop.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Die::Retry
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Die-Retry
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Die-Retry
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Die-Retry
+
+    Search CPAN
+        http://search.cpan.org/dist/Die-Retry
+
+    Source Code Repository
+        http://github.com/bjdean/die-retry
+
+    Ohloh News and Statistics
+        http://www.ohloh.net/projects/die-retry
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2008 Bradley Dean
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+

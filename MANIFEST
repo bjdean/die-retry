@@ -1,0 +1,10 @@
+AUTHORS
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/Die/Retry.pm
+t/00-load.t
+t/pod-coverage.t
+t/pod.t
+r/retry.t
