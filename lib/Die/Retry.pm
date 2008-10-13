@@ -79,6 +79,18 @@ __END__
 
 Die::Retry - Easy retry handler for exceptions
 
+=head1 SYNOPSIS
+
+ # Call some_func_with_exceptions($param1, $param2), capturing
+ # exceptions up to three times. 
+ # There will be no delay between retries.
+
+ use Die::Retry qw( retry );
+ my $retval = retry( sub { some_func_with_exceptions($param1, $param2)
+                   , times => 3
+                   , delay => 0
+                   );
+
 =head1 DESCRIPTION
 
 Easy retry handler for exceptions
@@ -117,19 +129,6 @@ The default is: 1.0s
 The function returns a scalar which is returned by the code ref. If the code
 ref returns anything other than a scalar then the scalar context of that value
 will be returned.
-
-An example of use would be:
-
- use Die::Retry qw( retry );
- my $retval = retry( sub { some_func_with_exceptions($param1, $param2)
-                   , times => 3
-                   , delay => 0
-                   );
-
-This example calls C<some_func_with_exceptions($param1, $param2)>, capturing
-exceptions up to three times. There will be no delay between retries. If the
-code returns successfully C<$retval> will have the scalar context value returned
-by C<some_func_with_exceptions($param1, $param2)>.
 
 =back
 
