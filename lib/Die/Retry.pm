@@ -18,7 +18,7 @@ use warnings;
 package Die::Retry;
 use base 'Exporter';
 
-our $VERSION = '0.03';
+our $VERSION = '0.10';
 
 our @EXPORT_OK = qw(retry);
 
@@ -32,7 +32,7 @@ use Carp;
 # Functions
 #
 
-sub retry {
+sub retry (&%) {
   my ($code_sub, %config_override) = @_;
 
   # $code_sub must be CODE
@@ -90,6 +90,10 @@ Die::Retry - Easy retry handler for exceptions
                    , times => 3
                    , delay => 0
                    );
+
+ # It can also be used like a builtin
+ $retval = retry { some_func_with_exceptions($param1, $param2) }
+                 times => 3, delay => 0;
 
 =head1 DESCRIPTION
 

@@ -3,3 +3,6 @@ Revision history for Die-Retry
 0.01    Mon Oct 13 23:20:37 BST 2008
         Original release
 
+0.10    Fri Oct 17 17:36:29 BST 2008
+
+        * Allow retry to be used like a builtin function 

@@ -6,7 +6,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
+use Test::More tests => 6;
 #use Test::More qw{ no_plan };
 
 
@@ -69,3 +69,14 @@ like( $@
     , qr/^Too many retries \(3\) - the last exception was: succeed_after_x /
     , 'retry failed after too many exceptions'
     );
+
+# Make sure this can be called like a builtin
+use Die::Retry qw( retry );
+eval {
+  retry { die } delay => 0, times => 42;
+};
+like( $@
+    , qr/^Too many retries \(42\) - the last exception was: /
+    , 'retry can be used like a builtin'
+    );
+
