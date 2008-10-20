@@ -1,3 +1,16 @@
+Mon Oct 20 12:44:51 BST 2008:
+
+  I've just found Attempt:
+    
+    http://search.cpan.org/author/MARKF/Attempt-1.01/lib/Attempt.pm
+
+  which does exactly what I coded for Die::Retry - in fact both the
+  code and the syntax are practically identical.
+  
+  So dies Die::Retry.
+
+==========
+
 Die-Retry
 
 This distribution provides 'Die::Retry', an easy retry handler for code blocks
